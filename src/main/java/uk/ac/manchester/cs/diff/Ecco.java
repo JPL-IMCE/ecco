@@ -451,7 +451,7 @@ public class Ecco {
 	 */
 	private void removeImports(OWLOntology ont) {
 		for(OWLImportsDeclaration importDecl : ont.getImportsDeclarations())
-			ont.getOWLOntologyManager().applyChange(new RemoveImport(ont.getOWLOntologyManager().getImportedOntology(importDecl), importDecl));
+			ont.getOWLOntologyManager().applyChange(new RemoveImport(ont, importDecl));
 	}
 	
 	
